@@ -1,17 +1,19 @@
 ---
-layout: post_case-study
 title: Denture case study
-excerpt: This lovely lady came in saying that she had a denture that she could not wear and asked if we could help her.
+date: 2016-01-19 00:00:00 Z
+permalink: "/case-study-test/"
 categories:
-  - case_studies
-image_before_path: /assets/images/case-study-14-before.jpg
-image_after_path: /assets/images/case-study-14-after.jpg
+- src
+- case_studies
+layout: post_case-study
+excerpt: This lovely lady came in saying that she had a denture that she could not
+  wear and asked if we could help her.
+image_before_path: "/assets/images/case-study-14-before.jpg"
+image_after_path: "/assets/images/case-study-14-after.jpg"
 image_before_alt: Before Dentures
 image_after_alt: After Dentures
-hash_link:
-permalink: /case-study-test/
+hash_link: 
 ---
-
 
 <div class="u-center-table u-mb-large-1-5"><img alt="Before Dentures" src="{{site.baseurl}}/assets/images/case-study-10-before.jpg" /> <img alt="After Dentures" src="{{site.baseurl}}/assets/images/case-study-10-after.jpg" /></div>
 

@@ -1,12 +1,15 @@
 ---
-layout: post_slider_page
 title: Bespoke Bridal Service
+date: 2016-01-01 00:00:00 Z
+permalink: "/bespoke-bridal-service/"
+categories:
+- src
+layout: post_slider_page
 excerpt: Wedding makeover to create the perfect smile for your big day
 image: bridal.jpg
 image_2x: bridal-2x.jpg
-permalink: /bespoke-bridal-service/
-
 ---
+
 Everyone wants to look the best for the special occasion that is their wedding, here at Dental Solutions we understand this and have put together a package to ensure that you have a beautiful smile for your wedding photos and for many years to come.
 
 * One hour cosmetic consultation only £35 

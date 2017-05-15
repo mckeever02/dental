@@ -1,10 +1,30 @@
-# Title, decription, tagline and URL for your site
-# Can be used in your theme by calling 'site.title' and so on
+---
 title: Dental Solutions
-description: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening teeth, Denture stabilisation, Smile makeovers
-tagline: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening teeth, Denture stabilisation, Smile makeovers
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  referrals:
+    title: Referrals
+    output: false
+  team:
+    title: Team
+    output: false
+  testimonials:
+    title: Testimonials
+    output: false
+  treatments:
+    title: Treatments
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+description: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening
+  teeth, Denture stabilisation, Smile makeovers
+tagline: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening
+  teeth, Denture stabilisation, Smile makeovers
 url: http://dentalsolutionsni.com
-
 contact:
   facebook: https://www.facebook.com/cosmeticdentist1/info/?section=hours&tab=page_info
   address: 23 Cherry Drive, Eglinton, BT47 3US
@@ -14,54 +34,36 @@ contact:
   directions: https://www.google.co.uk/maps/dir/''/23+Cherry+Dr,+Eglinton,+Londonderry,+Derry+BT47+3US/data=!4m5!4m4!1m0!1m2!1m1!1s0x48600942ce9610bd:0xa068bc53e821ec12?sa=X&ved=0ahUKEwjvjI-p0PfLAhXDQJoKHabwCPwQwwUIHjAA
   google: https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=dental+solutions+ni&lrd=0x48600942cbe9c45d:0xef4243af857d5cf1,3,,
   form: http://mailthis.to/dentalsolutions
-  #form: http://mailthis.to/mckeever02@gmail.com
-  feedback: "http://dentalsolutionsni.com/thank-you/"
-  appointment: "https://soe2olb.3pointdata.com/soe/new/Dental%20Solutions?pid=UKEGU01"
-
-
+  feedback: http://dentalsolutionsni.com/thank-you/
+  appointment: https://soe2olb.3pointdata.com/soe/new/Dental%20Solutions?pid=UKEGU01
 author:
   name: Dental Solutions
   email: info@dentalsolutionsni.com
   uri: http://dentalsolutionsni.com
-  bio: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening teeth, Denture stabilisation, Smile makeovers
-
-# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+  bio: Treatments include Veneers, Whitening, Implants, Cosmetic crowns, Straightening
+    teeth, Denture stabilisation, Smile makeovers
 source: src
 destination: serve
-
-# general setting for Jekyll
 googleAnalytics: UA-XXXXX-X
-
-# _config.build.yml overwrites these options when you run `gulp build`
-# Enables future posts (posts with dates in the future) and drafts
 future: true
 show_drafts: true
-# Disables the more accurate related posts for faster generating of the site
 lsi: false
-# Only make the last 10 posts so generating isn't slow
 limit_posts: 30
-
-# Permalink structure and pagination options
-#relative_permalinks: true
 permalink: pretty
-# paginate: 10
-#paginate_path: 'page:num'
-#excerpt_separator: '<!--more-->'
-
-# Markdown library
 markdown: redcarpet
-# Markdown library options
 redcarpet:
-  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
-              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
+  extensions:
+  - no_intra_emphasis
+  - tables
+  - fenced_code_blocks
+  - autolink
+  - smart
+  - strikethrough
+  - superscript
+  - underline
+  - highlight
+  - footnotes
 highlighter: true
-
 gems:
-  - jekyll-redirect-from
-  - jekyll-paginate
-
-collections:
-  - testimonials
-  - team
-  - referrals
-  - treatments
+- jekyll-redirect-from
+- jekyll-paginate
