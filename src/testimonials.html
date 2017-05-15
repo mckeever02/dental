@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Testimonials &ndash; Dental Solutions"
+class: testimonials
+description: "Dental treatment testimonials from our dentist patients in Eglinton"
+---
+
+<section class="section-page-large2 section-border-bottom u-flex-center-center">
+  <div class="container">
+    <h1 class="title-spaced u-ttu u-text-center">Patient<br> Testimonials</h1>
+  </div><!-- /container -->
+</section>
+
+<section>
+      {% for testimonial in site.testimonials %}
+      <article class="testimonial-item quote-large" itemscope itemtype="http://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Business" class="container">
+            <blockquote class="testimonial-item__quote">
+              {% assign post_words = 0 %}
+              {% assign lines = testimonial.content|split:'pre>' %}
+              {% for line in lines %}
+                  {% assign mod = forloop.index|modulo:2 %}
+                  {% assign line_words = line|strip_html|number_of_words|times:mod %}
+                  {% assign post_words = post_words|plus:line_words %}
+              {% endfor %}
+
+              {{testimonial.content}}
+              {% if post_words > 65 %}
+                <p class="read-more"><a href="#" class="read-more-link button button-ghost-blue button-small">Read More</a></p>
+              {% endif %}
+            </blockquote>
+            <author class="color-blue ">{{testimonial.author}}</author>
+        </div><!-- /container -->
+      </article>
+      {% endfor %}
+
+</section>

@@ -1,0 +1,708 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, * {
+  @include box-sizing(border-box);
+}
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $sans-serif;
+  color: $main-color; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow, .love-to-laugh {
+  width: 15%;
+}
+
+.u-flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-stunning-results {
+  background: url('../images/stunning-results.jpg') no-repeat;
+  background-size: cover;
+}
+
+.section-bg-white {
+  background-color: white;
+}
+
+.section-white {
+  color: white;
+}
+
+.section-laugh {
+  background-image: url('../images/laugh-mobile.jpg');
+  background-size: cover;
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (           min-resolution: 192dpi) and (min-width: 320px){
+    background-image: url('../images/laugh-mobile-2x.jpg');
+  }
+  /* Medium Screens */
+  @media only screen and (min-width: 760px) {
+    background-image: url('../images/laugh-tablet.jpg');
+  }
+  /* Medium Screens 2x */
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 760px),
+  only screen and (           min-resolution: 192dpi) and (min-width: 760px) {
+    background-image: url('../images/laugh-mobile-tablet-2x.jpg');
+  }
+  /* Desktop */
+  @media only screen and (min-width: 1239px) {
+    background-image: url('../images/laugh-desktop.jpg');
+  }
+  /* Large Desktop */
+  @media only screen and (min-width: 1920px) {
+    background-image: url('../images/laugh-desktop-large.jpg');
+  }
+}
+
+.section-gradient_radial {
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,darken($light-gray, 5%) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%,darken($light-gray, 5%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.section-medium-gray {
+  background-color: $medium-gray;
+}
+
+.section-hero {
+  position: relative;
+}
+
+.section-border {
+  border: 1px solid $light-gray;
+}
+
+.section-border-bottom {
+  border-bottom: 1px solid $light-gray;
+}
+
+.section-quote {
+  background: url('../images/quotation.svg') no-repeat white;
+  background-position: center;
+  background-size: 60%;
+  @media (min-width: $tablet) {
+    background-size: 30%;
+  }
+  @media (min-width: $container) {
+    background-size: 20%;
+  }
+}
+
+.section-blue-gradient {
+background-image: linear-gradient(#61bad7 0%, #c8ebfd 100%);
+background-repeat: no-repeat;
+}
+
+.two-pane-grid-item {
+  min-height: 50vh;
+  position: relative;
+  padding: $large-spacing;
+  width: 100%;
+  flex-basis: 100%;
+  background-size: contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  @media (min-width: $tablet) {
+    width: 50%;
+    flex-basis: 50%;
+  }
+  @media (max-width: $desktop) {
+    background-blend-mode: multiply;
+  }
+  @media (min-width: $desktop) {
+    background-color: transparent!important;
+    .subtitle {
+      margin: auto;
+    }
+    .subtitle, p {
+      text-shadow: none;
+    }
+  }
+  p {
+    margin-top: 5vh;
+    margin-left: auto;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    @media (min-width: $container) {
+      font-size: 1.0vw;
+      max-width: 50%;
+    }
+  }
+  @media (min-width: $desktop) {
+    &:nth-of-type(odd) {
+      border-right: 1px solid $light-gray;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-grid-item-container {
+  position: relative;
+  z-index: 2;
+}
+
+.container-overlay {
+  z-index: 2;
+}
+
+@media (min-width: $desktop){
+  .dental-treatments-item, .dental-referrals-item {
+    p {
+      color: $link-color;
+    }
+    .button.button-primary {
+      border-color: $link-color;
+      color: $link-color;
+    }
+    .subtitle {
+      color: $gray;
+    }
+  }
+
+  .kids-item, .qualified-staff-item {
+    p {
+      color: white;
+    }
+  }
+}
+
+.qualified-staff-item {
+  background-image: url('../images/staff.jpg');
+  background-color: #7888AC;
+  @media (min-width: $hd) {
+    background-image: url('../images/staff-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/staff-2x.jpg');
+  }
+}
+
+.dental-treatments-item {
+  background-image: url('../images/complex-treatments-item-bg.jpg');
+  background-color: #9B3E0A;
+  @media (min-width: $hd) {
+    background-image: url('../images/complex-treatments-item-bg-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/complex-treatments-item-bg-2x.jpg');
+  }
+}
+
+.kids-item {
+  background-image: url('../images/kids-item-bg.jpg');
+  background-color: #C3AFA1;
+  @media (min-width: $hd) {
+    background-image: url('../images/kids-item-bg-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/kids-item-bg-2x.jpg');
+  }
+}
+
+.dental-referrals-item {
+  background-image: url('../images/referrals.jpg');
+  background-color: #C3C3C3;
+  @media (min-width: $hd) {
+    background-image: url('../images/referrals-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/referrals-2x.jpg');
+  }
+}
+
+.guarantee-item {
+  background-image: url('../images/guarantee-item.jpg');
+  background-color: #6089B9;
+  @media (min-width: $hd) {
+    background-image: url('../images/guarantee-item-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/guarantee-item-2x.jpg');
+  }
+}
+
+.appointment-item {
+  background-image: url('../images/appointment-item.jpg');
+  background-color: #BE8675;
+  @media (min-width: $hd) {
+    background-image: url('../images/appointment-item-2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/appointment-item-2x.jpg');
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: .8;
+}
+
+.overlay-light {
+  background-color: #fff;
+}
+
+.overlay-dark {
+  background-color: rgba(0,0,0,.7);
+}
+
+.fullscreen-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+#bgvid {
+  z-index: -100;
+  background: url('../images/home-bg.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s opacity;
+  position: absolute;
+  top:52px;
+  left:0;
+  width: 100%;
+  height: 100%;
+  iframe {
+    visibility: hidden;
+    display: none;
+  }
+  @media (min-width: $horizontal-nav) {
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    iframe {
+      visibility: visible;
+      display: block;
+    }
+  }
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 100vh; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.associations {
+  box-sizing: content-box;
+  img {
+    max-height: 100px;
+    padding: $base-spacing 0;
+  }
+  @media (min-width: $phablet) {
+    img {
+      max-height: 130px;
+      padding: $small-spacing;
+    }
+  }
+}
+
+.footer-cta-item {
+  position: relative;
+  padding-bottom: $large-spacing;
+  &:first-of-type {
+    border-bottom: 1px solid $light-gray;
+  }
+  &:last-of-type {
+    padding-top: $large-spacing;
+    padding-bottom: 0;
+  }
+  img {
+    box-sizing: content-box;
+    height: 50px;
+    padding-bottom: $small-spacing;
+    transition: all .3s ease;
+  }
+  &:hover, &:focus {
+    img {
+      transform: scale(1.08);
+    }
+  }
+  &:active {
+    top: 1px;
+  }
+  @media (min-width: $phablet) {
+    padding: $base-spacing;
+    img {
+      height: 90px;
+    }
+    &:first-of-type {
+      border-right: 1px solid $light-gray;
+      border-bottom: 0;
+    }
+    &:last-of-type {
+      padding: $base-spacing;
+    }
+  }
+}
+
+.treatment-item, .referral-item {
+  margin-top: $base-spacing;
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.treatment-item_price {
+  display: block;
+  margin-bottom: $small-spacing;
+}
+
+.treatment-item.row {
+  .column {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: $small-spacing;
+  }
+  @media (min-width: 860px) {
+    .one-half.column {
+      width: 48%;
+    }
+    .column {
+      margin-left: 4%; }
+    .column:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.header-helper {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  left: 10px;
+  .container {
+    padding: 0;
+  }
+  .button {
+    border-radius: $border-radius;
+    font-size: 1.0rem;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 10px;
+  }
+  @media (min-width: $horizontal-nav) {
+    animation: 1s ease-in slideIn;
+    margin: auto;
+    text-align: center;
+    .button {
+      float: right;
+    }
+  }
+  @media (min-width: $horizontal-nav) {
+    position: relative;
+    top:0;
+    left: 0;
+    .container {
+      padding: 0 20px;
+    }
+    .button {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      font-size: 1.2rem;
+      line-height: 45px;
+      height: 45px;
+      padding: 0 15px;
+    }
+  }
+}
+
+.help-info {
+  background-color: $link-color;
+  color: white;
+  display: block;
+  width: 100%;
+  overflow-y: hidden;
+  max-height: 522px;
+  transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  svg {
+    fill: currentColor;
+    margin-right: 10px;
+    vertical-align: -3px;
+    height: 15px;
+  }
+  .column {
+    width: 100%;
+    margin-left: 0;
+  }
+  .container {
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing;
+  }
+  p {
+    margin: 0;
+    a {
+      color: white;
+    }
+  }
+  @media (min-width: $horizontal-nav) {
+    .column,
+    .columns {
+      margin-left: 4%; }
+    .column:first-child,
+    .columns:first-child {
+      margin-left: 0;
+    }
+    .one-third.column {
+      width: 30.6666666667%;
+    }
+    .two-thirds.column {
+      width: 65.3333333333%;
+    }
+    .one-half.column {
+      width: 48%;
+    }
+  }
+}
+
+.help-info.closed {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.help-info_details {
+  margin-bottom: $small-spacing;
+}
+
+.help-info_navigation {
+  margin-bottom: $base-spacing;
+  @media (min-width: $horizontal-nav) {
+    margin-bottom: 0;
+  }
+  .button {
+    margin-bottom: 0;
+    background-color: darken($link-color,6%);
+    &:hover, &:focus {
+      background-color: darken($link-color,18%);
+      &.current .button:after {
+        border-left:10px solid darken($link-color,18%);
+      }
+    }
+  }
+  .current .button {
+    background-color: darken($link-color,9%);
+  }
+  .current .button:after {
+    position: absolute;
+    bottom: -10px;
+    right: calc(50% - 10px);
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-top:10px solid darken($link-color,9%);
+    @media (min-width: $horizontal-nav) {
+      top: calc(50% - 10px);
+      right:-10px;
+      border-top:10px solid transparent;
+      border-bottom:10px solid transparent;
+      border-left:10px solid darken($link-color,9%);
+      border-right: 0;
+    }
+  }
+  li {
+    margin-bottom: 2rem;
+  }
+}
+
+.flex-grid.u-flex-v-center.team-item {
+  display: block;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin: $large-spacing 0;
+  img {
+    display: none;
+  }
+  .team-item-content {
+    position: relative;
+    z-index: 2;
+  }
+  @media (min-width: $tablet) {
+    display: flex;
+    background-image: none!important;
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      img {
+        float: left;
+      }
+    }
+    img {
+      float: right;
+      display: block;
+    }
+    .overlay {
+      display: none;
+    }
+  }
+  @media (min-width: $desktop) {
+    .team-item-content {
+      width: 80%;
+    }
+  }
+}
+
+.team-item-heading {
+  margin-bottom: 2.5rem;
+  .team-item-title {
+    margin-bottom: 0;
+    font-size: 2.6rem;
+  }
+  .team-item-initials {
+    font-weight: 300;
+  }
+  @media (min-width: $phablet) {
+    .team-item-title {
+      font-size: 3.0rem;
+    }
+  }
+  @media (min-width: $tablet) {
+    .team-item-title {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+.slider-page-featured-image {
+  max-height: 500px;
+}
+
+.testimonial-item {
+  padding: 10% 0;
+  min-height: 257px;
+  blockquote {
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  &:nth-of-type(even) {
+    background-color: rgba($light-gray, .2);
+    .read-more {
+      background-image: linear-gradient(to bottom, rgba(249,249,249,0), #F9F9F9);
+    }
+  }
+  @media (min-width: $phablet) {
+    padding: 5% 0;
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.testimonial-item__quote {
+  max-height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.5), white);
+}
+
+.post-header {
+  margin: $large-spacing*1.5 0;
+  text-align: center;
+}
+
+.post-content {
+  img {
+    display: block;
+  }
+}
+
+.grid-link {
+  @media (min-width: $phablet) {
+    display: flex;
+  }
+}
+.grid-link_item {
+  width: 100%;
+  display: block;
+  padding: 15% 5%;
+  text-decoration: none;
+  background-color: $blue;
+  color: white;
+  margin-bottom: 20px;
+  .grid-link_item_title {
+    margin: 0;
+  }
+  &:hover, &:focus {
+    background-color: darken($blue, 5%);
+    color: white;
+  }
+  @media (min-width: $phablet) {
+    flex: 1;
+    &:first-of-type {
+      margin-right: 20px;
+    }
+    &:last-of-type {
+      margin-left: 20px;
+    }
+  }
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+#g-recaptcha-response {
+    display: block !important;
+    position: absolute;
+    margin: -110px 0 0 0 !important;
+    width: 302px !important;
+    height: 76px !important;
+    z-index: -999999;
+    opacity: 0;
+}

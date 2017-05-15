@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <section class="section-page-large2 u-flex-center-center">
+    <div class="container">
+      <div class="u-text-center">
+        <h1 class="title-spaced u-ttu">{{page.title}}</h1>
+        {% if page.image_2x == null %}
+        <img class="slider-page-featured-image lazyload" src="{{site.baseurl}}/assets/images/{{page.image}}" data-src="{{site.baseurl}}/assets/images/{{page.image}}">
+        {% else %}
+        <img class="slider-page-featured-image lazyload" src="{{site.baseurl}}/assets/images/{{page.image}}" data-src="{{site.baseurl}}/assets/images/{{page.image}}" data-sizes="auto" alt="{{page.title}}" data-srcset="{{site.baseurl}}/assets/images/{{page.image}}, {{site.baseurl}}/assets/images/{{page.image_2x}} 2x">
+        {% endif %}
+      </div><!-- /u-text-center -->
+      <div class="post-content" itemprop="articleBody">
+        <p class="text-huge">{{page.excerpt}}</p>
+        {{ content }}
+      </div><!-- /post-content -->
+    </div><!-- /container -->
+  </section>
+</article>

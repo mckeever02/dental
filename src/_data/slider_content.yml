@@ -1,0 +1,30 @@
+- title: Bespoke Bridal Service
+  text: Wedding Makeover to create the perfect smile for your big day.
+  button_text: Find out more
+  button_link: bespoke-bridal-service.html
+  image_name: bridal.jpg
+  image_name_2x: bridal-2x.jpg
+  image_alt_text: Bride
+
+- title: World Class Smiles
+  text: We are a high end dental surgery with a reputation for excellence as we aim for perfection with every aspect of treatment from the simple filling to the most complex and challenging cases.
+  button_text: Meet The Team
+  button_link: team.html
+  image_name: world-class-smiles.jpg
+  image_name_2x: world-class-smiles-2x.jpg
+  image_alt_text: Ciaran and Diana
+
+- title: Dentures that make a difference
+  text: If you have issues with your dentures we would strongly recommend that you try having one of our premium dentures constructed…
+  button_text: Find out more
+  button_link: dentures-that-make-a-difference.html
+  image_name: before-after-dentures.jpg
+  image_name_2x: before-after-dentures-2x.jpg
+  image_alt_text: Dentures - Before & After
+
+- title: Missing teeth?
+  text: Why not enquire now to find out how we can replace your missing tooth/teeth with new teeth that are supported by implants
+  button_text: Find out more
+  button_link: missing-teeth.html
+  image_name: missing-teeth.svg
+  image_alt_text: Missing teeth

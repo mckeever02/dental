@@ -1,0 +1,46 @@
+---
+layout: treatment
+title: "Case Studies &ndash; Dental Solutions"
+hash_link: "case-studies"
+class: case-studies
+description: "Dental Solutions offer dental treatments such as Veneers, Whitening, Implants, Cosmetic crowns, Straightening teeth, Denture stabilisation, Smile makeovers"
+---
+
+<section class="section-page-large2 u-flex-center-center">
+  <div class="container">
+    {% if page.layout == 'post_treatment' %}
+    <h1 class="title-spaced u-ttu u-text-center">{{post.title}}</h1>
+    {% else %}
+    <h1 class="title-spaced u-ttu u-text-center">Case Studies</h1>
+    {% endif %}
+
+  </div><!-- /container -->
+</section>
+
+{% include treatments-nav.html %}
+
+
+<section class="section-page row">
+  <div class="container container-large">
+    {% for post in site.categories.case_studies reversed %}
+      <article id="{{ post.hash_link }}" class="treatment-item row">
+        <div class="one-half column">
+          <h2 class="medium-heading medium-weight u-mb-small">{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
+            {% if post.content != "" %}
+              <div class="row">
+                <a class="button button-small button-wide button-ghost-blue" href="{{site.baseurl}}{{ post.url }}#{{post.hash_link}}">More info</a>
+              </div>
+            {% endif %}
+
+        </div><!-- /column -->
+        <div class="one-half column">
+          <div class="before-after">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image_before }}"  data-src="{{site.baseurl}}/assets/images/{{ post.image_before }}">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image_after }}" data-src="{{site.baseurl}}/assets/images/{{ post.image_after }}">
+          </div>
+        </div><!-- /column -->
+      </article><!-- /treatment-item -->
+    {% endfor %}
+  </div><!-- /container -->
+</section>

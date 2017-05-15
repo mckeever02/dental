@@ -1,0 +1,150 @@
+//------------------------------------
+//   FONTS
+//------------------------------------
+
+
+
+//------------------------------------
+//   VARIABLES
+//------------------------------------
+
+//font-stacks
+$sans-serif:        "effra", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+//colors
+$blue: #39A8DF;
+$gray: #9B9B9B;
+$light-gray: #E0E0E0;
+$medium-gray: #EEEEEE;
+
+$main-color: $gray;
+$link-color: $blue;
+$border-color: $light-gray;
+
+
+.color-blue {
+  color: $blue
+}
+
+.color-white {
+  color: white;
+}
+
+//paths
+$image-path:  '../images';
+
+
+
+// Breakpoints
+$container: 1200px;
+$huge: 2550px;
+$hd: 1920px;
+$desktop: 1260px;
+$tablet: 700px;
+$phablet: 550px;
+$mobile: 400px;
+$horizontal-nav: 833px;
+
+$large-spacing: 5rem;
+$base-spacing: $large-spacing / 2;
+$small-spacing: $base-spacing / 2;
+
+$border-radius: 3px;
+
+
+//------------------------------------
+//   MIXINS
+//------------------------------------
+
+
+// Retina
+@mixin retinize($file, $type, $width, $height) {
+  background-image: url('../images/' + $file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+         (min--moz-device-pixel-ratio: 1.5),
+         (-o-min-device-pixel-ratio: 3/2),
+         (min-device-pixel-ratio: 1.5),
+         (min-resolution: 1.5dppx) {
+    & {
+      background-image: url('../images/' + $file + '-2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+}
+
+//Box-Sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+//Border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+//Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Text truncate  - when text overflows its container
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//Hide text
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+}
+
+//Horizontal Navigation lists
+@mixin navigation-list {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
+//Font Smoothing
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin transition {
+  transition: all .2s ease-in;
+}
+
+@mixin color-link($color) {
+  color: $color;
+  &:hover, &:focus {
+    color: darken($color,9%);
+  }
+}
+
+//------------------------------------
+//   Placeholders
+//------------------------------------

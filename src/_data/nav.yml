@@ -1,0 +1,14 @@
+- title: "Home"
+  href: "/"
+
+- title: "Team"
+  href: "/team/"
+
+- title: "Treatments"
+  href: "/treatments/"
+
+- title: "Referring Dentists"
+  href: "/referring-dentists/"
+
+- title: "Testimonials"
+  href: "/testimonials/"

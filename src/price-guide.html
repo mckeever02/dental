@@ -1,0 +1,51 @@
+---
+layout: treatment
+title: "Price Guide &ndash; Dental Solutions"
+hash_link: "price-guide"
+class: price-guide
+description: "Our competitive, and affordable prices on a range of dental treatments in Eglinton, Northern Ireland"
+redirect_from:
+  - /downloads/Price-Sheet.pdf
+---
+
+<section class="section-page-large2 u-flex-center-center">
+  <div class="container">
+    <h1 class="title-spaced u-ttu u-text-center">Competitive &amp; Affordable Price Guide</h1>
+  </div><!-- /container -->
+</section>
+
+{% include treatments-nav.html %}
+
+<section class="section-page">
+  <div class="container">
+
+    <table id="pricing-table" class="stripe">
+      <thead>
+        <tr>
+          <th>Treatment Type</th>
+          <th>Price</th>
+          <th>Sort</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for treatment in site.data.price_guide %}
+        <tr>
+          <td>{{ treatment.name }}</td>
+          <td>{{ treatment.price }}</td>
+          <td>{{ treatment.sort }}</td>
+          <td>{{ treatment.category }}:</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div><!-- /container -->
+</section>
+
+<section class="section-page">
+  <div class="container">
+    <h4 class="color-blue">Payment Plan</h4>
+    <p>To help spread the cost of your dental treatment we provide a range of treatment options including a dental membership plan that entitles you to a 10% discount on treatments up to £1500 as well as covering the majority of your routine needs for a reasonable monthly sum.</p>
+    <p>For larger treatment plans it is possible to pay over a longer term by setting up a direct debit. </p>
+  </div><!-- /container -->
+</section>

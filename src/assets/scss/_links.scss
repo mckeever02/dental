@@ -1,0 +1,18 @@
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  @include color-link($link-color);
+  @include transition;
+}
+
+.secondary-link {
+  @include color-link($main-color);
+}
+
+.link-reverse {
+  @include color-link($main-color);
+}
+
+.link-white {
+  @include color-link(white);
+}

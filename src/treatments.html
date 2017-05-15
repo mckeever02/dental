@@ -1,0 +1,61 @@
+---
+layout: treatment
+title: "Treatments &ndash; Dental Solutions"
+hash_link: "treatments"
+class: treatments
+description: "Dental Solutions offer dental treatments such as Veneers, Whitening, Implants, Cosmetic crowns, Straightening teeth, Denture stabilisation, Smile makeovers"
+redirect_from:
+  - /before-after
+---
+
+<section class="section-page-large2 u-flex-center-center">
+  <div class="container">
+    {% if page.layout == 'post_treatment' %}
+    <h1 class="title-spaced u-ttu u-text-center">{{post.title}}</h1>
+    {% else %}
+    <h1 class="title-spaced u-ttu u-text-center">The most advanced treatments</h1>
+    {% endif %}
+
+  </div><!-- /container -->
+</section>
+
+{% include treatments-nav.html %}
+
+
+<section class="section-page row">
+  <div class="container container-large">
+    <img class="scroll-helper" src="{{site.baseurl}}/assets/images/scroll-helper.svg" alt="Hover over images to view before and after">
+    {% assign post = site.treatments | sort: 'date' %}
+    {% for post in site.treatments %}
+      <article id="{{ post.hash_link }}" class="treatment-item row">
+        <div itemscope itemtype="http://schema.org/Product" class="one-half column">
+          <h2 itemprop="name" class="medium-heading medium-weight u-mb-small">{{ post.title }}</h2>
+            <p itemprop="description">{{ post.excerpt }}</p>
+            {% if post.price != null %}
+              <span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="u-ttu text-small text-spaced-small color-blue treatment-item_price">Price guide: <span itemprop="price">{{ post.price }}</span></span>
+            {% endif %}
+            {% if post.content != "" %}
+              <div class="row">
+                <a class="button button-small button-wide button-ghost-blue" href="{{ post.url }}#treatments">More info</a>
+              </div>
+            {% endif %}
+
+        </div><!-- /column -->
+        <div class="one-half column">
+          <div class="before-after u-mb-small">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image_before }}"  data-src="{{site.baseurl}}/assets/images/{{ post.image_before }}">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image_after }}" data-src="{{site.baseurl}}/assets/images/{{ post.image_after }}">
+          </div>
+          {% if post.image2_before %}
+          <div class="before-after">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image2_before }}"  data-src="{{site.baseurl}}/assets/images/{{ post.image2_before }}">
+            <img itemprop="image" class="lazyload" src="{{site.baseurl}}/assets/images/{{ post.image2_after }}" data-src="{{site.baseurl}}/assets/images/{{ post.image2_after }}">
+          </div>
+          {% endif %}
+
+        </div><!-- /column -->
+      </article><!-- /treatment-item -->
+    {% endfor %}
+
+</div><!-- /container -->
+</section>

@@ -1,0 +1,27 @@
+<footer class="section-bg-white ">
+
+  <section class="section-bg-white section-page">
+    <div class="container container-small u-text-center">
+      <p class="text-spaced text-large"><span class="color-blue">T</span> <a class="u-tdn link-reverse" href="tel:{{ site.contact.tel }}">{{ site.contact.tel_spaced }}</a> <span class="color-blue">E</span> <a class="u-tdn link-reverse" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a> <br> {{ site.contact.address }} <br>
+        <small><a href="{{site.baseurl}}/complaints-policy">Complaints</a> &bull; <a href="{{site.baseurl}}/guarantee">Guarantee</a></small>
+      </p>
+      <span class="u-block">Website by:</span>
+      <a href="//littlethunder.co" target="_blank">
+        <img class="footer-logo" src="{{site.baseurl}}/assets/images/little_thunder_logo.svg" alt="Little Thunder Co.">
+      </a>
+    </div><!-- /container-small -->
+  </section>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- JS -->
+<!-- inject:js -->
+<script src="{{ site.baseurl }}/assets/javascript/vendor.js"></script>
+<script src="{{ site.baseurl }}/assets/javascript/main.js"></script>
+<!-- endinject -->
+
+<!-- Google Analytics -->
+<script>(_gaq=document.createElement("script")).src=(/^....s/.test(location)?"//ssl":"//www")+".google-analytics.com/ga.js",(_gaq.a=_gaq.async=document.getElementsByTagName("script")[0]).parentNode.insertBefore(_gaq,_gaq.a),_gaq=[['_setAccount','UA-13215406-1'],['_trackPageview'],['_trackPageLoadTime']]</script>

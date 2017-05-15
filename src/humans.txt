@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Mckeever -- Developer -- @mick_mckeever
+    Little Thunder Co. -- Design -- littlethunder.co
+
+# THANKS
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    Jekyll, Lanyon/Poole, HTML5 Boilerplate
+    Yeoman, Jekyllized

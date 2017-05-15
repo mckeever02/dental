@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Refer a Patient &ndash; Dental Solutions"
+class: referring-dentists
+description: "Dental Solutions, Eglinton accept referrals for difficult aesthetic cases and challenging rehabilitating toothwear cases"
+---
+
+<section class="section-page-large2 section-border-bottom u-flex-center-center">
+  <div class="container">
+    <h1 class="title-spaced u-ttu u-text-center">Refer a Patient</h1>
+  </div><!-- /container -->
+</section>
+
+<section class="section-page">
+  <div class="container">
+    <p class="intro-text u-text-center">Fill out the form below if you would like to refer a patient to our clinic</p>
+    <form enctype="multipart/form-data" id="referral-form" action="{{site.contact.form}}" method="post" class="form">
+      <div class="row form-row">
+        <div class="one-half column">
+          <label for="Patient Name">Patient Name:*</label>
+          <input type="text" required name="Patient Name" class="input-full-width">
+        </div><!-- /column -->
+        <div class="one-half column">
+          <label for="Address">Address:*</label>
+          <input type="text" required name="Address" class="input-full-width">
+        </div><!-- /column -->
+      </div><!-- /row -->
+      <div class="row form-row">
+        <div class="one-half column">
+          <label for="Date of Birth">Date of Birth:*</label>
+          <input type="date" required name="Date of Birth" class="input-full-width">
+        </div><!-- /column -->
+        <div class="one-half column">
+          <label for="Phone">Phone No:*</label>
+          <input type="tel" required name="Phone" class="input-full-width">
+        </div><!-- /column -->
+      </div><!-- /row -->
+      <div class="row form-row">
+        <label for="Email">Email:*</label>
+        <input type="email" required name="Email" class="input-full-width">
+      </div>
+      <div class="row form-row">
+        <label for="Referral Details">Referral Details:*</label>
+        <textarea class="input-full-width" required name="Referral Details"></textarea>
+      </div>
+      <div class="row form-row">
+        <label for="Dentist Details">Dentist Details:*</label>
+        <textarea class="input-full-width" required name="Dentist Details"></textarea>
+      </div>
+      <div class="row form-row">
+        <div class="one-half column">
+          <label for="file">Upload Photograph(s):</label>
+          <input type="file" multiple name="file">
+        </div><!-- /column -->
+        <div class="one-half column">
+          <label for="file">Upload Radiograph(s):</label>
+          <input type="file" name="file">
+        </div><!-- /column -->
+      </div><!-- /row -->
+      <div class="row form-row">
+        <input type="text" name="_honey" value="" style="display:none">
+        <input type="hidden" name="_subject" value="New Dental Referral Request. Reply to this email to respond &ndash; Dental Solutions">
+        <input type="hidden" name="_replyto" value="%email">
+        <input type="hidden" name="_after" value="{{site.contact.feedback}}">
+        <button type="submit" class="button button-blue button-full-width">Submit Form</button>
+      </div>
+    </form>
+  </div><!-- /container -->
+
+
+</section>

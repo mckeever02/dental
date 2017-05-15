@@ -1,0 +1,115 @@
+- name: New Patient Consultation
+  price: £35
+  category: General
+  sort: 0
+
+- name: Routine consultation and oral health screen
+  price: £35
+  category: General
+  sort: 1
+
+
+- name: Scale and polish
+  price: £30
+  category: General
+  sort: 2
+
+- name: Radiographs (per film)
+  price: £10
+  category: General
+  sort: 3
+
+- name: Emergency Appointment
+  price: £30
+  category: General
+  sort: 4
+
+- name: White
+  price: From £90
+  category: Fillings
+  sort: 5
+
+- name: Silver
+  price: From £50
+  category: Fillings
+  sort: 6
+
+- name: Incisor/Premolar
+  price: £190/£260
+  category: Endodontics
+  sort: 7
+
+- name: Molar
+  price: £420
+  category: Endodontics
+  sort: 8
+
+- name: Extraction
+  price: £60
+  category: Extraction
+  sort: 9
+
+- name: Surgical Extraction
+  price: £90
+  category: Extraction
+  sort: 10
+
+- name: Crowns
+  price: From £450
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 11
+
+- name: Bridge (per tooth)
+  price: From £450
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 12
+
+- name: Veneer
+  price: From £500
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 13
+
+- name: Premium denture
+  price: £1500 per denture
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 14
+
+- name: Mid-range denture
+  price: £1200 per denture
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 15
+
+- name: Standard denture
+  price: £700 per denture
+  category: Crowns, Veneers, Bridges and Dentures
+  sort: 16
+
+- name: Single tooth
+  price: £2000-£3500
+  category: Implants
+  sort: 17
+
+- name: Lower Implant retained denture
+  price: £5000
+  category: Implants
+  sort: 18
+
+- name: Upper Implant retained denture
+  price: £7000
+  category: Implants
+  sort: 19
+
+- name: Full arch fixed teeth
+  price: £14000
+  category: Implants
+  sort: 20
+
+- name: Sports Mouthguard
+  price: £40
+  category: Other
+  sort: 21
+
+- name: Teeth Whitening
+  price: £200
+  category: Other
+  sort: 22

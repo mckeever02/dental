@@ -1,0 +1,32 @@
+<div class="mobile-nav-bar">
+  <div class="row">
+    <button id="menu-link" class="hamburger hamburger--3dx menu-link" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div><!-- /row -->
+  <nav class="nav-collapse" role="navigation">
+    {% include navigation-list.html %}
+  </nav>
+</div>
+{% include help-info.html %}
+<div class="header-helper">
+  <div class="container container-large">
+    <button id="help-toggle" href="javascript:void(0)" class="button button-blue button-header button-help button-small" type="button">Need some help?</button>
+  </div><!-- /container -->
+</div><!-- /header-helper -->
+  <div class="u-text-center">
+  {% if page.url == "/" %}
+    <a href="{{site.baseurl}}/"><h1 class="logo u-hide-text">Dental Solutions</h1></a>
+  {% else %}
+    <a href="{{site.baseurl}}/"><h2 class="logo u-hide-text">Dental Solutions</h2></a>
+  {% endif %}
+</div><!-- /u-text-center -->
+
+    <div class="u-center-table">
+      <nav class="nav-main" role="navigation">
+        {% include navigation-list.html %}
+      </nav>
+    </div><!-- /u-center-table -->
+</div><!-- /container -->

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="section-page-large2 u-flex-center-center">
+  <div class="container">
+    <h2 class="h1 title-spaced u-ttu u-text-center">The most advanced treatments</h2>
+  </div><!-- /container -->
+</section>
+
+{% include treatments-nav.html %}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="h2 post-title" itemprop="name headline">{{ page.title }}</h1>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,256 @@
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+.menu-link {
+  float: right;
+  display: block;
+  padding: 1em;
+  color: white;
+
+}
+
+.mobile-nav-bar {
+  position: relative;
+  z-index: 999;
+}
+
+.nav-collapse {
+  width: 100%;
+  background-color: $blue;
+}
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+  position: relative;
+  top: 0;
+}
+
+.nav-main {
+  display: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+  text-align: center;
+  &:last-of-type {
+    padding-bottom: 1rem;
+  }
+  a {
+    display: block;
+    padding: $small-spacing 0;
+    color: rgba(255,255,255,.6);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &.active a, a:hover, a:focus {
+    color: white;
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: $horizontal-nav) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle, .nav-collapse, .mobile-nav-bar, .menu-link {
+    visibility: hidden;
+  }
+  .mobile-nav-bar {
+    height: 0;
+    display: none;
+  }
+  .nav-main {
+    display: block;
+    ul {
+      font-size: 1.8rem;
+    }
+    li {
+      width: auto;
+      display: inline-block;
+      float: left;
+      &:not(:last-of-type) {
+        padding-right: 3.5rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      text-transform: lowercase;
+      color: $main-color;
+      @include transition;
+      &:hover, &:focus, & .active {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+nav {
+  li.active a {
+    color: $link-color;
+  }
+}
+
+/*!
+ * Hamburger
+ */
+
+.hamburger {
+  padding: 10px 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  top: 3px;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: $link-color;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+ * 3DX
+ */
+.hamburger--3dx .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px; }
+
+.hamburger--3dx .hamburger-inner {
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
+    transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dx.active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+  .hamburger--3dx.active .hamburger-inner::before {
+    -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+            transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dx.active .hamburger-inner::after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+.treatment-nav {
+  border: 1px solid $border-color;
+  margin-bottom: $base-spacing;
+  position: relative;
+  background-color: rgba(255,255,255,.9);
+  z-index:9999;
+  ul {
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+  }
+  ul li {
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    & a {
+      display: inline-block;
+      padding: $small-spacing 0;
+      margin-right: $base-spacing;
+    }
+  }
+  @media (min-width: $phablet) {
+    ul {
+      display: flex;
+    }
+    ul li {
+      flex: 1 1 100%;
+      & a {
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.nav-gradient {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, #fff));
+  // background: red;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 9999;
+  width: 6em;
+  height: $large-spacing - .1rem;
+}
+
+
+.referring-dentists #referring-dentists-link {
+  color: $link-color;
+}
