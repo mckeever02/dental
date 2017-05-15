@@ -5,8 +5,8 @@ excerpt: Crowns are often used to protect damaged teeth, it is now possible to c
 categories:
  - treatments
 price: £420&ndash;£500
-image_before: crowns-before.jpg
-image_after: crowns-after.jpg
+image_before_path: crowns-before.jpg
+image_after_path: crowns-after.jpg
 image_before_alt: Before Natural Crowns
 image_after_alt: After Natural Crowns
 hash_link: "crowns"

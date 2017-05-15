@@ -5,8 +5,8 @@ excerpt: As dentists we believe that there is nothing better than your own natur
 categories:
  - treatments
 price: £1100&ndash;£2200
-image_before: straightening-before.jpg
-image_after: straightening-after.jpg
+image_before_path: straightening-before.jpg
+image_after_path: straightening-after.jpg
 image_before_alt: before
 image_after_alt: after
 hash_link: "straightening"

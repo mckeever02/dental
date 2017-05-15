@@ -5,8 +5,8 @@ excerpt: Tooth whitening is a fantastic way to improve the appearance of your na
 categories:
  - treatments
 price: £200
-image_before: whitening-before.jpg
-image_after: whitening-after.jpg
+image_before_path: whitening-before.jpg
+image_after_path: whitening-after.jpg
 image_before_alt: Before Teeth Whitening
 image_after_alt: After Teeth Whitening
 hash_link: "whitening"

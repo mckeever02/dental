@@ -4,8 +4,8 @@ title:  Replacing missing teeth with Bridges Case Study
 excerpt: This gentleman presented with 2 missing lower teeth and decided against having implants placed.
 categories:
  - case_studies
-image_before: case-study-5-before.jpg
-image_after: case-study-5-after.jpg
+image_before_path: case-study-5-before.jpg
+image_after_path: case-study-5-after.jpg
 image_before_alt: Before Bridges
 image_after_alt: After Bridges
 hash_link: "bridges"
